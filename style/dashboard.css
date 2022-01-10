@@ -123,18 +123,41 @@ body a:hover {
   max-width: 600px;
   width: 600px;
   background: white;
-  -webkit-box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.151);
-          box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.151);
+  -webkit-box-shadow: 0px 0px 50px rgba(54, 53, 53, 0.151);
+          box-shadow: 0px 0px 50px rgba(54, 53, 53, 0.151);
   margin-left: 30px;
   padding: 10px 0px;
   border-radius: 8px;
-  color: #B4A0A0;
+  color: black;
 }
 
 .container .right_container .nav_bar .search_container img {
   height: 25px;
   padding-right: 10px;
   padding-left: 15px;
+}
+
+.container .right_container .nav_bar .search_container input {
+  border: none;
+  color: black;
+  height: 100%;
+  width: 100%;
+}
+
+.container .right_container .nav_bar .search_container input:focus {
+  outline: none;
+}
+
+.container .right_container .nav_bar .search_container :-ms-input-placeholder, .container .right_container .nav_bar .search_container :-ms-input-placeholder, .container .right_container .nav_bar .search_container ::-ms-input-placeholder {
+  color: grey;
+}
+
+.container .right_container .nav_bar .search_container ::-ms-input-placeholder, .container .right_container .nav_bar .search_container :-ms-input-placeholder, .container .right_container .nav_bar .search_container ::-ms-input-placeholder {
+  color: grey;
+}
+
+.container .right_container .nav_bar .search_container ::placeholder, .container .right_container .nav_bar .search_container :-ms-input-placeholder, .container .right_container .nav_bar .search_container ::-ms-input-placeholder {
+  color: grey;
 }
 
 .container .right_container .table {

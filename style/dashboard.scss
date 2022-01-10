@@ -72,7 +72,7 @@ body {
             
             justify-content: space-between;
             align-items: center;
- 
+            
             .search_container {
                 display: flex;
                 flex-direction: row;
@@ -80,7 +80,7 @@ body {
                 max-width: 600px;
                 width: 600px;
                 background: white;
-                box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.151);
+                box-shadow: 0px 0px 50px rgba(54, 53, 53, 0.151);
                 margin-left: 30px;
                 padding: 10px 0px;
                 border-radius: 8px;
@@ -89,7 +89,19 @@ body {
                     padding-right: 10px;
                     padding-left: 15px;
                 }
-                color: #B4A0A0;
+                color: black;
+                input {
+                    border: none;
+                    color : black;
+                    height: 100%;
+                    width: 100%;
+                }
+                input:focus {
+                    outline: none;
+                }
+                ::placeholder, :-ms-input-placeholder, ::-ms-input-placeholder {
+                    color: grey;
+                }
             }
         }
         .table {

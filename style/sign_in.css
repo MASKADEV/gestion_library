@@ -1,0 +1,136 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@500;900&display=swap");
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+body {
+  font-family: 'Roboto';
+  font-weight: 500;
+  background-color: #F9F9F9;
+  position: relative;
+  height: 100%;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  height: 400px;
+  width: 90%;
+  background: white;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 300px;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  border-radius: 10px;
+  -webkit-box-shadow: 10px 10px 40px rgba(0, 0, 0, 0.098);
+          box-shadow: 10px 10px 40px rgba(0, 0, 0, 0.098);
+  max-width: 1200px;
+}
+
+.container .left_container {
+  width: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.container .left_container img {
+  width: 400px;
+  height: 400px;
+}
+
+.container .right_container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: auto 0px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 50%;
+}
+
+.container .right_container .custom_input {
+  -ms-flex-item-align: start;
+      -ms-grid-row-align: start;
+      align-self: start;
+  border: 1px solid #CDB7B7;
+  border-radius: 3px;
+  padding: 10px 8px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  color: solid #B79D9D;
+  font-size: 13px;
+  width: 60%;
+  margin-bottom: 30px;
+  max-width: 300px;
+}
+
+.container .right_container h2 {
+  margin-bottom: 20px;
+  font-size: 18px;
+  text-align: start;
+  width: 63%;
+  -ms-flex-item-align: start;
+      -ms-grid-row-align: start;
+      align-self: start;
+}
+
+.container .right_container .sign_in {
+  border: none;
+  background: #5B327A;
+  color: white;
+  height: 40px;
+  width: 65%;
+  border-radius: 5px;
+  margin-top: 30px;
+  -ms-flex-item-align: start;
+      -ms-grid-row-align: start;
+      align-self: start;
+  max-width: 300px;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.container .right_container .sign_in:hover {
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 750px) {
+  .container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    height: 800px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-top: 250px;
+  }
+}
+/*# sourceMappingURL=sign_in.css.map */

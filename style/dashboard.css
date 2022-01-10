@@ -163,6 +163,8 @@ body a:hover {
 .container .right_container .table {
   height: 1000px;
   width: 100%;
+  border-spacing: 0 1em;
+  overflow-y: scroll;
 }
 
 .container .right_container .table img {
@@ -170,11 +172,16 @@ body a:hover {
 }
 
 .container .right_container .table th {
-  padding: 20px 30px 0px 30px;
+  width: 60px;
+  height: 40px;
+  text-align: center;
+  padding: 0px 30px;
 }
 
 .container .right_container .table td {
-  padding: 20px 30px 0px 30px;
+  width: 60px;
+  height: 40px;
+  text-align: center;
 }
 
 .container .right_container .table tr {

@@ -5,11 +5,56 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style/dashboard.css">
     <title>Dashboard</title>
 </head>
 
 <body>
-
+    <section class="container">
+        <div class="left_container">
+            <h1>SHOPNOW</h1>
+            <nav class ="side_bar">
+                <a href="">Home</a>
+                <a href="">Statistic</a>
+                <a href="">Profile</a>
+                <a href="">Setting</a>
+            </nav>
+            <a href="" class ="logout">Logout</a>
+        </div>
+        
+        <div class="right_container">
+            <div class="nav_bar">
+                <div class="search_container">
+                    <img src="../assets/icons/search.png" alt="">
+                    <p>Search</p>
+                </div>
+                <img src="../assets/icons/add.png" class="add_img" alt="add">
+            </div>
+            <div class="table">
+                <table>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Categories</th>
+                    <th>Price</th>
+                    <th>Quantity</th>
+                    <th>Operations</th>
+                    <div class="details">
+                        <tr>
+                            <td>01</td>
+                            <td>Book 1</td>
+                            <td>Sience</td>
+                            <td>88.99$</td>
+                            <td>33</td>
+                            <td class="operations">
+                                <img src="../assets/icons/edit.png" alt="Edit">
+                                <img src="../assets/icons/delete.png" alt="Delete">
+                            </td>
+                        </tr>
+                    </div>
+                </table>
+            </div>
+        </div>
+    </section>
 </body>
 
 </html>

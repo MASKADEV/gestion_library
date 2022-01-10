@@ -94,6 +94,14 @@ body {
         height: 800px;
         justify-content: center;
         align-items: center;
-        margin-top: 250px;
+        margin-top: 10px;
+        .left_container {
+            display: flex;
+            margin: 0px auto;
+            img {
+                height: 300px;
+                width: 300;
+            }
+        }
     }
 }

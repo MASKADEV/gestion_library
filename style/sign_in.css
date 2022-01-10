@@ -130,7 +130,17 @@ body {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    margin-top: 250px;
+    margin-top: 10px;
+  }
+  .container .left_container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin: 0px auto;
+  }
+  .container .left_container img {
+    height: 300px;
+    width: 300;
   }
 }
 /*# sourceMappingURL=sign_in.css.map */

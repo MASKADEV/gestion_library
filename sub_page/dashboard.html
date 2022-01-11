@@ -15,11 +15,11 @@
             <h1>SHOPNOW</h1>
             <nav class ="side_bar">
                 <a href="">Home</a>
+                <a href="" class = "addbook-btn">Add Book</a>
+                <a href="">Add Categories</a>
                 <a href="">Statistic</a>
-                <a href="">Profile</a>
-                <a href="">Setting</a>
             </nav>
-            <a href="" class ="logout">Logout</a>
+            <a href="../index.html" class ="logout">Logout</a>
         </div>
         
         <div class="right_container">
@@ -28,7 +28,7 @@
                     <img src="../assets/icons/search.png" alt="">
                     <input type="text" name="search" placeholder="Search">
                 </div>
-                <img src="../assets/icons/add.png" class="add_img" alt="add">
+                <div></div>
             </div>
             <div class="table">
                 <table>
@@ -307,6 +307,31 @@
             </div>
         </div>
     </section>
-</body>
+    <section class="crud-form">
+        <Form class="custom-form-products">
+            <input type="text" name="bookname" placeholder="Book Name">
+            <input type="text" name="author" placeholder="Author">
+            <div class="custom-select">
+                <select name="" id="">
+                    <option value="0">categories 1</option>
+                    <option value="1">categories 2</option>
+                    <option value="2">categories 3</option>
+                    <option value="3">categories 4</option>
+                </select>
+            </div>
+            <textarea name="description" id="" cols="30" rows="10" placeholder="Description"></textarea>
+            <div class="price-quantity">
+                <input type="number" name="price" placeholder="Price">
+                <input type="number" name="quantity" placeholder="Quantity">
+            </div>
+            <div class="submit-cancel">
+                <button class = "submit">Submit</button>
+                <button class = "cancel">Cancel</button>
+            </div>
+        </Form>
 
+    </section>
+<script src="../scripts/dashboard.js"></script>
+
+</body>
 </html>

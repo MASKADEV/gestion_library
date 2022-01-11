@@ -16,10 +16,11 @@
         </div>
         <div class="right_container">
             <h2>Sign in to get <span style="color: #5B327A;">Started!</span></h2>
-            <input type="text" name= "user_name" placeholder="User Name" class="custom_input">
-            <input type="password" name= "password" placeholder="Passwrod" class="custom_input">
-            <button class ="sign_in" onclick="parent.location='sub_page/dashboard.html'" value="click here">Sign in</button>
+            <input type="text" name="user_name" placeholder="User Name" class="custom_input">
+            <input type="password" name="password" placeholder="Passwrod" class="custom_input">
+            <button class="sign_in" onclick="parent.location='sub_page/dashboard.php'" value="click here">Sign in</button>
         </div>
     </div>
 </body>
+
 </html>

@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../style/dashboard.css">
+    <link rel="stylesheet" href="../style/dashboard.css?v=<?php echo time(); ?>">
     <title>Dashboard</title>
 </head>
 
@@ -14,19 +14,23 @@
 
         <!-- Side Bar Menu  -->
         <div class="left_container">
-            <h1>SHOPNOW</h1>
+            <div class="side_bar_logo">
+                <h1>SHOPNOW</h1>
+                <h3 class="hide_sideBar">X</h3>
+            </div>
             <nav class="side_bar">
                 <a href="">Home</a>
                 <a href="" class="addbook-btn">Add Book</a>
                 <a href="" class="addCategorie-btn">Add Categories</a>
                 <a href="">Statistic</a>
             </nav>
-            <a href="../index.html" class="logout">Logout</a>
+            <a href="../index.php" class="logout">Logout</a>
         </div>
 
         <!-- Dashboard Details -->
         <div class="right_container">
             <div class="nav_bar">
+                <img class="menu_icon" src="../assets/icons/menu.png" alt="menu icons">
                 <div class="search_container">
                     <img src="../assets/icons/search.png" alt="">
                     <input type="text" name="search" placeholder="Search">
@@ -93,7 +97,7 @@
             </div>
         </Form>
     </section>
-    <script src="../scripts/dashboard.js"></script>
+    <script src="../scripts/dashboard.js?v=<?php echo time(); ?>"></script>
 </body>
 
 </html>

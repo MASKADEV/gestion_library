@@ -103,5 +103,53 @@ body {
                 width: 300;
             }
         }
+        .right_container {
+            display: flex;
+            flex-direction: column;
+            margin: auto 0px;
+            align-items: center;
+            width: 50%;
+          
+            position: relative;
+            .custom_input {
+                overflow: hidden;
+                align-self: start;
+                border: 1px solid #CDB7B7;
+                border-radius: 3px;
+                padding: 10px 0px;
+                padding-left: 5px;
+                -webkit-appearance: none; 
+                -moz-appearance: none; 
+                color: solid #B79D9D;
+                font-size: 13px;
+                width: 95%;
+                margin-bottom: 30px;
+                max-width : 300px;
+            }
+            h2 {
+                margin-bottom: 20px;
+                font-size: 18px;
+                text-align: start;
+                width: 100%;
+                align-self:start;
+            }
+            .sign_in {
+                border: none;
+                background: $primary_color;
+                color: white;
+                height: 40px;
+                width: 100%;
+                border-radius: 5px;
+                margin-top: 30px;
+                align-self: start;
+                // max-width: 300px;
+                font-weight: bold;
+                letter-spacing : 1px;
+                
+            }
+            .sign_in:hover {
+                cursor: pointer;
+            }
+        }
     }
 }

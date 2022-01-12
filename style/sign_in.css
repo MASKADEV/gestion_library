@@ -142,5 +142,63 @@ body {
     height: 300px;
     width: 300;
   }
+  .container .right_container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin: auto 0px;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 50%;
+    position: relative;
+  }
+  .container .right_container .custom_input {
+    overflow: hidden;
+    -ms-flex-item-align: start;
+        -ms-grid-row-align: start;
+        align-self: start;
+    border: 1px solid #CDB7B7;
+    border-radius: 3px;
+    padding: 10px 0px;
+    padding-left: 5px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    color: solid #B79D9D;
+    font-size: 13px;
+    width: 95%;
+    margin-bottom: 30px;
+    max-width: 300px;
+  }
+  .container .right_container h2 {
+    margin-bottom: 20px;
+    font-size: 18px;
+    text-align: start;
+    width: 100%;
+    -ms-flex-item-align: start;
+        -ms-grid-row-align: start;
+        align-self: start;
+  }
+  .container .right_container .sign_in {
+    border: none;
+    background: #5B327A;
+    color: white;
+    height: 40px;
+    width: 100%;
+    border-radius: 5px;
+    margin-top: 30px;
+    -ms-flex-item-align: start;
+        -ms-grid-row-align: start;
+        align-self: start;
+    font-weight: bold;
+    letter-spacing: 1px;
+  }
+  .container .right_container .sign_in:hover {
+    cursor: pointer;
+  }
 }
 /*# sourceMappingURL=sign_in.css.map */

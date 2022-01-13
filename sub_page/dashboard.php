@@ -39,24 +39,18 @@
             </div>
             <div class="table">
                 <table>
-                    <th>ID</th>
+                    <th>Isbn</th>
                     <th>Name</th>
                     <th>Categories</th>
                     <th>Price</th>
                     <th>Quantity</th>
                     <th>Operations</th>
                     <div class="details">
-                        <tr>
-                            <td>01</td>
-                            <td>Book 1</td>
-                            <td>Sience</td>
-                            <td>88.99$</td>
-                            <td>33</td>
-                            <td class="operations">
-                                <img src="../assets/icons/edit.png" alt="Edit">
-                                <img src="../assets/icons/delete.png" alt="Delete">
-                            </td>
-                        </tr>
+                      <!-- getData from database -->
+                      <?php
+                        include '../functions.php';
+                        getAllDataBook();
+                       ?>
 
                     </div>
                 </table>
@@ -65,35 +59,43 @@
     </section>
     <!-- Form Add Edit Products -->
     <section class="crud-form-products">
-        <Form class="custom-form-products">
-            <input type="text" name="bookname" placeholder="Book Name">
-            <input type="text" name="author" placeholder="Author">
+        <Form  action ="../addEditBook.php"class="custom-form-products">
+        <input type="text" id="isbn" name="isbn" placeholder="isbn">
+        <input type="text" name="bookname" id="bookname" placeholder="Book Name">
+            <input type="text"  name="author" id="author" placeholder="Author">
             <div class="custom-select">
-                <select name="" id="">
-                    <option value="0">categories 1</option>
-                    <option value="1">categories 2</option>
-                    <option value="2">categories 3</option>
-                    <option value="3">categories 4</option>
-                </select>
+                    <select name="categorie" id="categorie">
+                      <!-- get categorie from database    -->
+                           <?php 
+                                getAllCategorie();
+
+                            ?>
+
+                    </select>
+                    
+                   
             </div>
-            <textarea name="description" id="" cols="30" rows="10" placeholder="Description"></textarea>
+            <textarea name="description" id="description" cols="30" rows="10" placeholder="Description"></textarea>
             <div class="price-quantity">
-                <input type="number" name="price" placeholder="Price">
-                <input type="number" name="quantity" placeholder="Quantity">
+                <input type="number" name="price"  id="price" placeholder="Price">
+                <input type="number" name="quantity" id="quantity" placeholder="Quantity">
             </div>
             <div class="submit-cancel">
-                <button class="submit">Submit</button>
-                <button class="cancel">Cancel</button>
+                <button  type ="submit" class="submit">Submit</button>
+                
+                <input  type="button"  value= "cancel"  onclick=resteDashboard() class="cancel">
+
             </div>
         </Form>
+
     </section>
     <!-- Form Add Edit Categories -->
     <section class="crud-form-categorie">
-        <Form class="custom-form-categorie">
+        <Form  class="custom-form-categorie">
             <input type="text" name="categorie" placeholder="Categorie">
             <div class="submit-cancel">
-                <button class="submit">Submit</button>
-                <button class="cancel">Cancel</button>
+                <button type="" class="submit">Submit</button>
+                <button type="reset" class="cancel">Cancel</button>
             </div>
         </Form>
     </section>
@@ -101,3 +103,4 @@
 </body>
 
 </html>
+<!--  -->

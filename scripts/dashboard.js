@@ -8,6 +8,13 @@ var hide_menu = document.querySelector('.side_bar_logo');
 addBook_btn.addEventListener('click', (e) => {
     e.preventDefault();
     document.querySelector('.crud-form-products').style.display = 'flex';
+    document.getElementById("isbn").value="";
+    document.getElementById("bookname").value="";
+    document.getElementById("author").value="";
+    document.getElementById("description").value="";
+    document.getElementById("categorie").value="";
+    document.getElementById("price").value="";
+    document.getElementById("quantity").value=" ";
 })
 
 //Crud Categories Form
@@ -29,3 +36,24 @@ hide_menu.addEventListener('click', (e) => {
     e.preventDefault();
     document.querySelector('.left_container').style.left = '-300px';
 })
+
+
+function showUpdateBox(isbn,title,author,description,quantity,price,categorie){
+    document.querySelector('.crud-form-products').style.display = 'flex';
+
+
+    document.getElementById("isbn").value=isbn;
+    document.getElementById("bookname").value=title;
+    document.getElementById("author").value=author;
+    document.getElementById("description").value=description;
+    document.getElementById("categorie").value=categorie;
+    document.getElementById("price").value=price;
+    document.getElementById("quantity").value=quantity;
+}
+function resteDashboard(){
+        
+    document.querySelector('.crud-form-products').style.display = 'none';
+
+
+
+}

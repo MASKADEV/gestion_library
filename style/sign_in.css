@@ -84,6 +84,12 @@ body {
   max-width: 300px;
 }
 
+.container .right_container form {
+  -ms-flex-item-align: start;
+      -ms-grid-row-align: start;
+      align-self: start;
+}
+
 .container .right_container h2 {
   margin-bottom: 20px;
   font-size: 18px;
@@ -101,7 +107,6 @@ body {
   height: 40px;
   width: 65%;
   border-radius: 5px;
-  margin-top: 30px;
   -ms-flex-item-align: start;
       -ms-grid-row-align: start;
       align-self: start;

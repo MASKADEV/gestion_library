@@ -107,7 +107,7 @@
             </div>
         </div>
     </section>
-    <script src="../scripts/dashboard.js?v=<?php echo time(); ?>">
+    <script src="../js/dashboard.js?v=<?php echo time(); ?>">
     </script>
 </body>
 

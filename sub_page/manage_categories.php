@@ -84,7 +84,7 @@
             </div>
         </Form>
     </section>
-    <script src="../scripts/manage_categories.js?v=<?php echo time(); ?>"></script>
+    <script src="../js/manage_categories.js?v=<?php echo time(); ?>"></script>
 </body>
 
 </html>

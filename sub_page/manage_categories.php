@@ -30,15 +30,15 @@
         <!-- Dashboard Details -->
         <div class="right_container">
             <div class="nav_bar">
-                <img class="menu_icon" src="../assets/icons/menu.png" alt="menu icons">
-                <img src="../assets/icons/add.png" style="margin-left:40px" class="addCategorie-btn">
+                <img class="menu_icon" src="../assets/icons/menu.svg" alt="menu icons">
+                <img src="../assets/icons/add.svg" style="margin-left:40px" class="addCategorie-btn">
             </div>
             <div class="table">
                 <table>
                     <th>Categories</th>
                     <th>Operations</th>
                     <div class="details">
-                        <!-- get allGategorie -->
+                        <!-- get allCategorie -->
                         <?php
                         include '../php/functions.php';
                         getAllCategorieTable();
@@ -55,7 +55,7 @@
             <input type="text" name="name_categorie" id="name_categorie" placeholder="Categorie">
             <div class="submit-cancel">
                 <button class="submit">Submit</button>
-                <input type="button" value="cancel" onclick=resteManageCategorie() class="cancel">
+                <a type="button" value="cancel" onclick=resteManageCategorie() class="cancel">Cancel</a>
             </div>
         </Form>
     </section>

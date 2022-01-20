@@ -28,7 +28,7 @@
         <!-- Dashboard Details -->
         <div class="right_container">
             <div class="nav_bar">
-                <img class="menu_icon" src="../assets/icons/menu.png" alt="menu icons">
+                <img class="menu_icon" src="../assets/icons/menu.svg" alt="menu icons">
                 <div class="search_container">
                     <img src="../assets/icons/search.png" alt="">
                     <input type="text" name="search" placeholder="Search">
@@ -62,9 +62,8 @@
             <input type="file" class="product_thumb" name="product_thumb" id="product_thumb">
             <div class="custom-select">
                 <select name="categorie" id="categorie">
-                    <!-- get categorie from database    -->
+                    <!-- get categorie from database -->
                     <?php
-
                     getAllCategorie();
                     ?>
                 </select>
@@ -75,7 +74,7 @@
                 <input type="number" name="quantity" id="quantity" placeholder="Quantity">
             </div>
             <div class="submit-cancel">
-                <button class="submit">Submit</button>
+                <button class="submit" type="submit">Submit</button>
                 <input type="button" value="cancel" onclick=resteDashboard() class="cancel">
             </div>
         </Form>
@@ -84,7 +83,8 @@
     <section class="book-details">
         <div class="container-details">
             <div class="left_container_details">
-                <img id="product_thumbB" src="" alt="Book cover">
+                <!-- <img id="product_thumbB" src="" alt="Book cover"> -->
+                <h1 id="product_thumbB"></h1>
             </div>
             <div class="right_container_details">
                 <div class="title-book-details">

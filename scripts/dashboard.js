@@ -25,11 +25,7 @@ hide_menu.addEventListener('click', (e) => {
     document.querySelector('.left_container').style.left = '-300px';
 })
 
-//Show Book Details
-// book_details.addEventListener('click', (e) => {
-//     e.preventDefault();
-//     document.querySelector('.book-details').style.visibility = 'visible';
-// })
+
 // show Book Details 1
 function showBookDetails(isbn,title,author,description,price,quantity,categorie,product_thumb){
     document.querySelector('.book-details').style.visibility = 'visible';
@@ -40,7 +36,7 @@ function showBookDetails(isbn,title,author,description,price,quantity,categorie,
     document.getElementById("categorieB").innerHTML=categorie;
     document.getElementById("priceB").innerHTML=price;
     document.getElementById("quantityB").innerHTML=quantity;
-    document.getElementById("product_thumbB").src=product_thumb;
+    document.getElementById("product_thumbB").innerHTML=product_thumb;
 }
 
 //close Book Details
@@ -48,19 +44,23 @@ close_book_details.addEventListener('click', (e) => {
     e.preventDefault();
     document.querySelector('.book-details').style.visibility = 'hidden';
 })
+
 function resteDashboard(){
-        
     document.querySelector('.crud-form-products').style.visibility = 'hidden';
-
-
-
+    document.getElementById("isbn").value="";
+    document.getElementById("bookname").value="";
+    document.getElementById("author").value="";
+    document.getElementById("description").value="";
+    document.getElementById("categorie").value="";
+    document.getElementById("price").value=0;
+    document.getElementById("quantity").value=0;
 }
-//show UpdateBook Form 
 
+//show UpdateBook Form 
 function showUpdateBox(isbn,title,author,description,price,quantity,categorie,product_thumb){
     document.querySelector('.crud-form-products').style.visibility = 'visible';
-     
-
+    console.log(categorie);
+    console.log(product_thumb);
     document.getElementById("isbn").value=isbn;
     document.getElementById("bookname").value=title;
     document.getElementById("author").value=author;
@@ -68,6 +68,5 @@ function showUpdateBox(isbn,title,author,description,price,quantity,categorie,pr
     document.getElementById("categorie").value=categorie;
     document.getElementById("price").value=price;
     document.getElementById("quantity").value=quantity;
-    document.getElementById("product_thumb").src=product_thumb;
-
+    // document.getElementById("product_thumb").src=product_thumb;
 }

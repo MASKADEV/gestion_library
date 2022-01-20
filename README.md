@@ -1,5 +1,7 @@
 # gestion_library
 
+<div style="display=flex;flex-diretion:row;justify-content: center; align-items: center" >![](assets/thumb.svg)</div>
+
 <div class="sc-7lcum6-0 edCusw"><h2 class="ekeyz-0 dPTSJD">Project context</h2><div><div><p class="ekeyz-0 jasXoh">La société ShopNow possède un magasin et enregistre jusqu'à maintenant les informations sur le stock en format papier. ShopNow veut digitaliser la gestion d'inventaire afin de faciliter le travail pour ses employés et d'avoir une plateforme utile pour l'accès à distance.</p>
 <p class="ekeyz-0 jasXoh">​</p>
 <p class="ekeyz-0 jasXoh">Pour cela, ShopNow a confié à votre agence la conception, le design et l'implémentation de sa plateforme de gestion d'inventaire.</p>

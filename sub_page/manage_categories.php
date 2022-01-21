@@ -24,7 +24,7 @@
                 <a href="./manage_categories.php">Manage Categories</a>
                 <!-- <a href="">Statistic</a> -->
             </nav>
-            <a href="../index.php" class="logout">Logout</a>
+            <a href="../index.php" class="logout"><img src="../assets/icons/logout.svg" alt="logout" style="height: 40px; fill:white;"></a>
         </div>
 
         <!-- Dashboard Details -->
@@ -52,7 +52,7 @@
     <section class="crud-form-categorie">
         <Form action="../php/addEditBook.php" class="custom-form-categorie">
             <input type="text" id="id_categorie" name="id_categorie"><br><br>
-            <input type="text" name="name_categorie" id="name_categorie" placeholder="Categorie">
+            <input type="text" name="name_categorie" id="name_categorie" placeholder="Categorie" required>
             <div class="submit-cancel">
                 <button class="submit">Submit</button>
                 <a type="button" value="cancel" onclick=resteManageCategorie() class="cancel">Cancel</a>
@@ -62,21 +62,21 @@
     <!-- Form Add Edit Products -->
     <section class="crud-form-products">
         <Form class="custom-form-products">
-            <input type="text" name="bookname" placeholder="Book Name">
-            <input type="text" name="author" placeholder="Author">
-            <input type="file" class="product_thumb" name="product_thumb">
+            <input type="text" name="bookname" placeholder="Book Name" required>
+            <input type="text" name="author" placeholder="Author" required>
+            <input type="file" class="product_thumb" name="product_thumb" required>
             <div class="custom-select">
-                <select name="" id="">
+                <select name="" id="" required>
                     <!-- get categorie from database    -->
                     <?php
                     getAllCategorie();
                     ?>
                 </select>
             </div>
-            <textarea name="description" id="" cols="30" rows="10" placeholder="Description"></textarea>
+            <textarea name="description" id="" cols="30" rows="10" placeholder="Description" required></textarea>
             <div class="price-quantity">
-                <input type="number" name="price" placeholder="Price">
-                <input type="number" name="quantity" placeholder="Quantity">
+                <input type="number" name="price" placeholder="Price" required>
+                <input type="number" name="quantity" placeholder="Quantity" required>
             </div>
             <div class="submit-cancel">
                 <button class="submit">Submit</button>

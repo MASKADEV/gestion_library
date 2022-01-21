@@ -1,5 +1,5 @@
 <?php
-
+session_start();
 //connction 
 function connection()
 {
@@ -13,6 +13,7 @@ function login($username, $pass)
     $sql = ("select * from admin WHERE username='$username' and Password='$pass'");
     $res = mysqli_query(connection(), $sql);
     if (mysqli_num_rows($res) == 1) {
+        $_SESSION["is_logedin"] = 1;
         header('location: ../sub_page/dashboard.php');
     } else {
         echo "<script> alert('username or password incorrect')</script>";
@@ -60,6 +61,7 @@ function getAllDataBook()
         </tr>";
     }
 }
+
 //update Book 
 function updateBook($isbn, $title, $author, $description,  $quantite, $price,  $id_categorie, $product_thumb)
 {
@@ -72,12 +74,14 @@ function updateBook($isbn, $title, $author, $description,  $quantite, $price,  $
         header('location: ../sub_page/dashboard.php');
     }
 }
+
 //existanceBook
 function bookExist($isbn)
 {
     $test = mysqli_query(connection(), "select * from book WHERE isbn = '$isbn'");
     return mysqli_num_rows($test);
 }
+
 // getCategorie
 function getAllCategorie()
 {
@@ -89,6 +93,7 @@ function getAllCategorie()
         <option value='$row[0]'>" . $row[1] . "</option>";
     }
 }
+
 // getAllCategorie format table
 function getAllCategorieTable()
 {
@@ -105,7 +110,6 @@ function getAllCategorieTable()
     </tr>";
     }
 }
-
 
 // delete Categorie
 function deleteCategorie($id_categorie)
@@ -129,6 +133,7 @@ function addCategorie($name_categorie)
         header('location: ../sub_page/manage_categories.php');
     }
 }
+
 // categorie update
 function updateCategorie($id_categorie, $name_categorie)
 {

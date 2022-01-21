@@ -23,7 +23,7 @@
                 <a href="./manage_categories.php">Manage Categories</a>
                 <!-- <a href="">Statistic</a> -->
             </nav>
-            <a href="../index.php" class="logout">Logout</a>
+            <a href="../index.php" class="logout" onclick="<?php session_destroy(); ?>"><img src="../assets/icons/logout.svg" alt="logout" style="height: 40px; fill:white;"></a>
         </div>
         <!-- Dashboard Details -->
         <div class="right_container">
@@ -56,22 +56,22 @@
     <!-- Form Add Edit Products -->
     <section class="crud-form-products">
         <Form action="../php/addEditBook.php" class="custom-form-products">
-            <input type="text" name="isbn" id="isbn" placeholder="isbn">
-            <input type="text" name="bookname" id="bookname" placeholder="Book Name">
-            <input type="text" name="author" id="author" placeholder="Author">
-            <input type="file" class="product_thumb" name="product_thumb" id="product_thumb">
+            <input type="text" name="isbn" id="isbn" placeholder="isbn" required>
+            <input type="text" name="bookname" id="bookname" placeholder="Book Name" required>
+            <input type="text" name="author" id="author" placeholder="Author" required>
+            <input type="file" class="product_thumb" name="product_thumb" id="product_thumb" required>
             <div class="custom-select">
-                <select name="categorie" id="categorie">
+                <select name="categorie" id="categorie" required>
                     <!-- get categorie from database -->
                     <?php
                     getAllCategorie();
                     ?>
                 </select>
             </div>
-            <textarea name="description" id="description" cols="30" rows="10" placeholder="Description"></textarea>
+            <textarea name="description" id="description" cols="30" rows="10" placeholder="Description" required></textarea>
             <div class="price-quantity">
-                <input type="number" name="price" id="price" placeholder="Price">
-                <input type="number" name="quantity" id="quantity" placeholder="Quantity">
+                <input type="number" name="price" id="price" placeholder="Price" required>
+                <input type="number" name="quantity" id="quantity" placeholder="Quantity" required>
             </div>
             <div class="submit-cancel">
                 <button class="submit" type="submit">Submit</button>

@@ -211,7 +211,7 @@ body a:hover {
 }
 
 .container .right_container .table {
-  height: 100vh;
+  height: 90vh;
   width: 70vw;
   border-spacing: 0 1em;
   overflow-y: scroll;
@@ -804,7 +804,7 @@ body a:hover {
     color: grey;
   }
   .container .right_container .table {
-    height: 100vh;
+    height: 90vh;
     width: 100%;
     border-spacing: 0 1em;
     overflow-y: scroll;

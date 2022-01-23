@@ -55,7 +55,7 @@
     </section>
     <!-- Form Add Edit Products -->
     <section class="crud-form-products">
-        <Form action="../php/addEditBook.php" class="custom-form-products">
+        <Form action="../php/addEditBook.php" enctype='multipart/form-data' class="custom-form-products" method="POST">
             <input type="text" name="isbn" id="isbn" placeholder="isbn" required>
             <input type="text" name="bookname" id="bookname" placeholder="Book Name" required>
             <input type="text" name="author" id="author" placeholder="Author" required>
@@ -83,27 +83,19 @@
     <section class="book-details">
         <div class="container-details">
             <div class="left_container_details">
-                <!-- <img id="product_thumbB" src="" alt="Book cover"> -->
-                <h1 id="product_thumbB"></h1>
+                <img id="product_thumbB" src="../assets/cover1.jpeg" alt="Book cover">
             </div>
             <div class="right_container_details">
                 <div class="title-book-details">
                     <h2 id="titleB">Book Title</h2>
                     <h2 class="close-book-details">X</h2>
                 </div>
-                <!-- <h3><span>by</span> Mia Jackson</h3>
-                <h3><span>price</span> 49.99$</h3>
-                <h3><span>categorie</span> Java</h3>
-                <h3><span>Isbn</span> 121312</h3> -->
                 <h3 id="authorB">
-                    < Mia Jackson</h3>
-                        <h3 id="priceB"> 49.99$</h3>
-                        <h3 id="categorieB"> Java</h3>
-                        <h3 id="isbnB"> 121312</h3>
-                        <h3 id="quantityB"> 121312</h3>
-
-
-                        <p id="descriptionB" class="book-preview">Book Preview</p>
+                    Author</h3>
+                <h4 id="priceB"></h4>
+                <h4 id="categorieB"></h4>
+                <h4 class="book-preview">Preview</h4>
+                <p id="descriptionB"></p>
             </div>
         </div>
     </section>

@@ -511,6 +511,7 @@ body a:hover {
       -ms-flex-align: center;
           align-items: center;
   z-index: 4;
+  font-family: 'Roboto';
 }
 
 .book-details .container-details {
@@ -535,11 +536,21 @@ body a:hover {
   width: 50%;
   background-color: #C4C4C4;
   height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .book-details .container-details .left_container_details img {
   height: 500px;
   width: 300px;
+  border-radius: 5px;
 }
 
 .book-details .container-details .right_container_details {
@@ -589,6 +600,10 @@ body a:hover {
   margin-right: 5px;
 }
 
+.book-details .container-details .right_container_details #descrih4tionB {
+  margin-top: 80px;
+}
+
 .book-details .container-details .right_container_details h3 {
   font-weight: 400;
   margin-top: 25px;
@@ -607,15 +622,9 @@ body a:hover {
 }
 
 .book-details .container-details .right_container_details p {
-  margin-top: 30px;
+  margin-top: 20px;
   font-size: 14px;
   font-weight: 400;
-}
-
-.book-details .container-details .right_container_details h5 {
-  margin-top: 20px;
-  text-decoration: underline;
-  font-weight: bold;
 }
 
 @media only screen and (max-width: 500px) {
@@ -1067,8 +1076,8 @@ body a:hover {
     height: 50%;
   }
   .book-details .container-details .left_container_details img {
-    height: 500px;
-    width: 300px;
+    height: 300px;
+    width: 200px;
   }
   .book-details .container-details .right_container_details {
     width: 100%;
@@ -1112,10 +1121,13 @@ body a:hover {
     color: #C4C4C4;
     margin-right: 5px;
   }
+  .book-details .container-details .right_container_details #descrih4tionB {
+    margin-top: 50px;
+  }
   .book-details .container-details .right_container_details h3 {
     font-weight: 400;
-    margin-top: 10px;
-    font-size: 15px;
+    margin-top: 25px;
+    font-size: 22px;
   }
   .book-details .container-details .right_container_details h3 span {
     color: #C4C4C4;
@@ -1124,17 +1136,12 @@ body a:hover {
     margin-top: 20px;
     font-size: 15;
     color: #C4C4C4;
+    overflow-y: auto;
   }
   .book-details .container-details .right_container_details p {
-    margin-top: 20px;
-    margin-right: 80px;
-    font-size: 14px;
+    margin-top: 17px;
+    font-size: 12px;
     font-weight: 400;
-  }
-  .book-details .container-details .right_container_details h5 {
-    margin-top: 20px;
-    text-decoration: underline;
-    font-weight: bold;
   }
 }
 /*# sourceMappingURL=dashboard.css.map */

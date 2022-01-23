@@ -49,7 +49,7 @@ function getAllDataBook()
     while ($row = mysqli_fetch_row($res)) {
         echo "<tr>";
         echo "<td>" . $row[0] . "</td>
-            <td onclick=\"showBookDetails('$row[0]','$row[1]','$row[2]','$row[3]','$row[4]','$row[5]','$row[6]','$row[7]');\" class='book_details'> " . $row[1] . "</td>
+            <td onclick=\"showBookDetails('$row[0]','$row[1]','$row[2]','$row[3]','$row[4]','$row[5]','$row[6]','assets/$row[7]');\" class='book_details'> " . $row[1] . "</td>
             <td>" . $row[6] . "</td>
             <td>" . $row[5] . "$ </td>
             <td>" . $row[4] . "</td>

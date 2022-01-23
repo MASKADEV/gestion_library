@@ -29,14 +29,12 @@ hide_menu.addEventListener('click', (e) => {
 // show Book Details 1
 function showBookDetails(isbn,title,author,description,price,quantity,categorie,product_thumb){
     document.querySelector('.book-details').style.visibility = 'visible';
-    document.getElementById("isbnB").innerHTML=isbn;
     document.getElementById("titleB").innerHTML=title;
-    document.getElementById("authorB").innerHTML=author;
+    document.getElementById('authorB').innerHTML=author;
     document.getElementById("descriptionB").innerHTML=description;
     document.getElementById("categorieB").innerHTML=categorie;
-    document.getElementById("priceB").innerHTML=price;
-    document.getElementById("quantityB").innerHTML=quantity;
-    document.getElementById("product_thumbB").innerHTML=product_thumb;
+    document.getElementById('priceB').innerHTML=price;
+    document.getElementById("product_thumbB").src="../" + product_thumb;
 }
 
 //close Book Details
@@ -59,8 +57,6 @@ function resteDashboard(){
 //show UpdateBook Form 
 function showUpdateBox(isbn,title,author,description,price,quantity,categorie,product_thumb){
     document.querySelector('.crud-form-products').style.visibility = 'visible';
-    console.log(categorie);
-    console.log(product_thumb);
     document.getElementById("isbn").value=isbn;
     document.getElementById("bookname").value=title;
     document.getElementById("author").value=author;
@@ -68,5 +64,5 @@ function showUpdateBox(isbn,title,author,description,price,quantity,categorie,pr
     document.getElementById("categorie").value=categorie;
     document.getElementById("price").value=price;
     document.getElementById("quantity").value=quantity;
-    // document.getElementById("product_thumb").src=product_thumb;
+    document.getElementById("product_thumb").src=product_thumb;
 }

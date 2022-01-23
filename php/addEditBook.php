@@ -1,25 +1,18 @@
 <?php
 
 include 'functions.php';
-if (isset($_GET['isbn'])) {
-  if (empty($_GET['isbn'])) {
-    header('location: ../../sub_page/dashboard.php');
-  }
-
-  if (bookExist($_GET['isbn'])) {
-    // echo $_GET['product_thumb'];
-    updateBook($_GET['isbn'], $_GET['bookname'], $_GET['author'], $_GET['description'], $_GET['quantity'], $_GET['price'], $_GET['categorie'], $_GET['product_thumb']);
+if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_FILES['product_thumb'])) {
+  // print_r($_FILES['product_thumb']);
+  if (bookExist($_POST['isbn'])) {
+    updateBook($_POST['isbn'], $_POST['bookname'], $_POST['author'], $_POST['description'], $_POST['quantity'], $_POST['price'], $_POST['categorie'], $_POST['product_thumb']);
   } else {
-    addbook($_GET['isbn'], $_GET['bookname'], $_GET['author'], $_GET['description'], $_GET['quantity'], $_GET['price'], $_GET['categorie'], $_GET['product_thumb']);
+    $img_name = $_FILES['product_thumb']['name'];
+    $img_size = $_FILES['product_thumb']['size'];
+    $tmp_name = $_FILES['product_thumb']['tmp_name'];
+    $error = $_FILES['product_thumb']['error'];
+
+    $new_img_name = uniqid("IMG-", true) . '.' . $img_ex_lc;
+
+    addbook($_POST['isbn'], $_POST['bookname'], $_POST['author'], $_POST['description'], $_POST['quantity'], $_POST['price'], $_POST['categorie'], $img_name);
   }
-}
-//add Edit Categorie
-
-elseif (!empty($_GET['id_categorie'])) {
-
-  // echo"ok";
-  updateCategorie($_GET['id_categorie'], $_GET['name_categorie']);
-} else {
-  // echo"notok";
-  addCategorie($_GET['name_categorie']);
 }

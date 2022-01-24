@@ -29,10 +29,12 @@
         <div class="right_container">
             <div class="nav_bar">
                 <img class="menu_icon" src="../assets/icons/menu.svg" alt="menu icons">
-                <div class="search_container">
-                    <img src="../assets/icons/search.png" alt="">
-                    <input type="text" name="search" placeholder="Search">
-                </div>
+                <Form method="POST" action="../php/searchBook.php">
+                    <div class="search_container">
+                        <button type="submit" class="search-btn"><img src="../assets/icons/search.png"></button>
+                        <input type="text" name="search" placeholder="Search">
+                    </div>
+                </Form>
                 <div></div>
             </div>
             <div class="table">
@@ -46,7 +48,7 @@
                     <div class="details">
                         <?php
                         include '../php/functions.php';
-                        getAllDataBook();
+                        fetchBook();
                         ?>
                     </div>
                 </table>

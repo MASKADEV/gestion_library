@@ -1,9 +1,9 @@
 <?php
 session_start();
+
 //connction 
 function connection()
 {
-
     return mysqli_connect("localhost", "root", "", "gestionstockbiblio");
 }
 
@@ -41,7 +41,7 @@ function deleteBook($isbn)
 }
 
 //Get bookData
-function getAllDataBook()
+function fetchBook()
 {
     $sql = "select  isbn,title,author,description,quantite,price,name_categorie,thumbnailUrl from book b join categorie c ON c.id_categorie=b.id_categorie";
     $res = mysqli_query(connection(), $sql);
@@ -55,7 +55,26 @@ function getAllDataBook()
             <td>" . $row[4] . "</td>
             <td class='operations'>
             <a href =../php/delete.php?idsupp=" . $row[0] . "><img src='../assets/icons/delete.svg' alt='Edit'></a>
+        <img src='../assets/icons/edit.svg' alt='Edit' onclick=\"showUpdateBox('$row[0]','$row[1]','$row[2]','$row[3]','$row[4]','$row[5]','$row[6]','$row[7]');\"  >
+            </td>   
+        </tr>";
+    }
+}
 
+//Search For book
+function searchForBook($bookname)
+{
+    $sql = "SELECT * FROM book Where title = $bookname";
+    $result = mysqli_query(connection(), $sql);
+    while ($row = mysqli_fetch_row($result)) {
+        echo "<tr>";
+        echo "<td>" . $row[0] . "</td>
+            <td onclick=\"showBookDetails('$row[0]','$row[1]','$row[2]','$row[3]','$row[4]','$row[5]','$row[6]','assets/$row[7]');\" class='book_details'> " . $row[1] . "</td>
+            <td>" . $row[6] . "</td>
+            <td>" . $row[5] . "$ </td>
+            <td>" . $row[4] . "</td>
+            <td class='operations'>
+            <a href =../php/delete.php?idsupp=" . $row[0] . "><img src='../assets/icons/delete.svg' alt='Edit'></a>
         <img src='../assets/icons/edit.svg' alt='Edit' onclick=\"showUpdateBox('$row[0]','$row[1]','$row[2]','$row[3]','$row[4]','$row[5]','$row[6]','$row[7]');\"  >
             </td>   
         </tr>";

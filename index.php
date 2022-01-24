@@ -21,7 +21,7 @@
                 <input type="password" name="password" placeholder="Passwrod" class="custom_input" required>
                 <button class="sign_in" onclick="" value="click here">Sign in</button>
                 <?php
-                if ($_SERVER['REQUEST_METHOD'] === 'GET') {
+                if ($_SERVER['REQUEST_METHOD'] === 'GET' && isset($_GET['error'])) {
                     if ($_GET['error'] == 'invalideuser') {
                         echo "<p class =\"error\">Invalide User</p>";
                     }

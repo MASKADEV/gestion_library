@@ -71,7 +71,10 @@
             height: 30px;
             padding-right: 10px;
         }
-        
+        .search-btn {
+            background: transparent;
+            border: none;
+        }
         img:hover {
             cursor: pointer;
         }

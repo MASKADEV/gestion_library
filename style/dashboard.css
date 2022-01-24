@@ -129,6 +129,11 @@ body a:hover {
   padding-right: 10px;
 }
 
+.container .right_container .search-btn {
+  background: transparent;
+  border: none;
+}
+
 .container .right_container img:hover {
   cursor: pointer;
 }

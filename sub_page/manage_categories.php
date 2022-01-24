@@ -61,7 +61,7 @@
     </section>
     <!-- Form Add Edit Products -->
     <section class="crud-form-products">
-        <Form action="../php/addEditBook.php" class="custom-form-products">
+        <Form action="../php/addEditBook.php" enctype='multipart/form-data' class="custom-form-products" method="POST">
             <input type="text" name="isbn" id="isbn" placeholder="isbn" required>
             <input type="text" name="bookname" id="bookname" placeholder="Book Name" required>
             <input type="text" name="author" id="author" placeholder="Author" required>

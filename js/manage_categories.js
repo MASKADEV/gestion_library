@@ -36,8 +36,7 @@ hide_menu.addEventListener('click', (e) => {
 //show UpdateCategorie Form 
 function showUpdateCategorieBox(id_categorie,name_categorie){
 
-    document.getElementById("id_categorie").style.visibility ="visible";
-
+    document.getElementById("id_categorie").style.visibility ="hidden";
     document.querySelector('.crud-form-categorie').style.visibility = 'visible';
     document.getElementById("id_categorie").value=id_categorie;
     document.getElementById("name_categorie").value=name_categorie;

@@ -1,3 +1,14 @@
+
+<?php 
+session_start();
+if(isset($_SESSION['is_logedin'])){
+
+}else{
+    header('location: ../index.php');
+
+}
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -24,7 +35,7 @@
                 <a href="./manage_categories.php">Manage Categories</a>
                 <!-- <a href="">Statistic</a> -->
             </nav>
-            <a href="../index.php" class="logout"><img src="../assets/icons/logout.svg" alt="logout" style="height: 40px; fill:white;"></a>
+            <a href="../php/login.php?logout=1" class="logout"><img src="../assets/icons/logout.svg" alt="logout" style="height: 40px; fill:white;"></a>
         </div>
 
         <!-- Dashboard Details -->
@@ -40,8 +51,11 @@
                     <div class="details">
                         <!-- get allCategorie -->
                         <?php
+                        
                         include '../php/functions.php';
+  
                         getAllCategorieTable();
+
                         ?>
                     </div>
                 </table>

@@ -1,3 +1,13 @@
+<?php 
+session_start();
+if(isset($_SESSION['is_logedin'])){
+
+}else{
+    header('location: ../index.php');
+
+}
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -23,13 +33,13 @@
                 <a href="./manage_categories.php">Manage Categories</a>
                 <!-- <a href="">Statistic</a> -->
             </nav>
-            <a href="../index.php" class="logout" onclick="<?php session_destroy(); ?>"><img src="../assets/icons/logout.svg" alt="logout" style="height: 40px; fill:white;"></a>
+        <a href="../php/login.php?logout=1" class="logout"><img src="../assets/icons/logout.svg" alt="logout" style="height: 40px; fill:white;"></a>
         </div>
         <!-- Dashboard Details -->
         <div class="right_container">
             <div class="nav_bar">
                 <img class="menu_icon" src="../assets/icons/menu.svg" alt="menu icons">
-                <Form method="POST" action="../php/searchBook.php">
+                <Form method="GET" action="dashboard.php">
                     <div class="search_container">
                         <button type="submit" class="search-btn"><img src="../assets/icons/search.png"></button>
                         <input type="text" name="search" placeholder="Search">
@@ -46,9 +56,17 @@
                     <th>Quantity</th>
                     <th>Operations</th>
                     <div class="details">
-                        <?php
+                    <?php
                         include '../php/functions.php';
-                        fetchBook();
+                        if (isset($_GET['search']) && !empty($_GET['search'])){
+                            searchForBook($_GET['search']);
+
+                        }else{
+                               fetchBook();
+
+                        }
+                          
+                       
                         ?>
                     </div>
                 </table>

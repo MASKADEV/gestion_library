@@ -1,5 +1,4 @@
 <?php
-session_start();
 
 //connction 
 function connection()
@@ -13,7 +12,9 @@ function login($username, $pass)
     $sql = ("select * from admin WHERE username='$username' and Password='$pass'");
     $res = mysqli_query(connection(), $sql);
     if (mysqli_num_rows($res) == 1) {
-        $_SESSION["is_logedin"] = 1;
+        session_start();
+
+        $_SESSION['is_logedin'] = 1;
         header('location: ../sub_page/dashboard.php');
     } else {
         echo "<script> alert('username or password incorrect')</script>";
@@ -64,9 +65,10 @@ function fetchBook()
 //Search For book
 function searchForBook($bookname)
 {
-    $sql = "SELECT * FROM book Where title = $bookname";
-    $result = mysqli_query(connection(), $sql);
-    while ($row = mysqli_fetch_row($result)) {
+    $sql = "select  isbn,title,author,description,quantite,price,name_categorie,thumbnailUrl from book b join categorie c ON c.id_categorie=b.id_categorie where title = '$bookname'";
+    $res = mysqli_query(connection(), $sql);
+
+    while ($row = mysqli_fetch_row($res)) {
         echo "<tr>";
         echo "<td>" . $row[0] . "</td>
             <td onclick=\"showBookDetails('$row[0]','$row[1]','$row[2]','$row[3]','$row[4]','$row[5]','$row[6]','assets/$row[7]');\" class='book_details'> " . $row[1] . "</td>

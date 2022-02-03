@@ -61,7 +61,7 @@ function showUpdateBox(isbn,title,author,description,price,quantity,categorie,pr
     document.getElementById("bookname").value=title;
     document.getElementById("author").value=author;
     document.getElementById("description").value=description;
-    document.getElementById("categorie").value=categorie;
+    document.getElementById("first").value="dssd";
     document.getElementById("price").value=price;
     document.getElementById("quantity").value=quantity;
     document.getElementById("product_thumb").src=product_thumb;

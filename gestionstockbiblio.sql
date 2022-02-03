@@ -27,6 +27,8 @@ SET time_zone = "+00:00";
 --
 -- Table structure for table `admin`
 --
+create Database gestionstockbiblio;
+use gestionstockbiblio;
 
 CREATE TABLE `admin` (
   `username` varchar(15) NOT NULL,

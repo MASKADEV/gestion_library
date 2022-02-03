@@ -37,8 +37,16 @@ function addBook($isbn, $title, $author, $description,  $quantite, $price,  $id_
 // delete Book
 function deleteBook($isbn)
 {
-    $sql = "delete from book where isbn='$isbn'";
+    
+  $test = mysqli_query(connection(), "SELECT thumbnailUrl FROM book WHERE isbn = '$isbn'");
+      $result= mysqli_fetch_row($test);
+      $result= $result[0];
+   
+     unlink($result);
+   
+     $sql = "delete from book where isbn='$isbn'";
     $res = mysqli_query(connection(), $sql);
+
 }
 
 //Get bookData
@@ -108,7 +116,7 @@ function getAllCategorie()
 {
     $sql = "select * from categorie";
     $res = mysqli_query(connection(), $sql);
-
+        echo"<option id='first' selected hidden>choose category</option>";
     while ($row = mysqli_fetch_row($res)) {
         echo "
         <option value='$row[0]'>" . $row[1] . "</option>";

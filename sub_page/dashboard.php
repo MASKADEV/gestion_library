@@ -103,7 +103,7 @@ if(isset($_SESSION['is_logedin'])){
     <section class="book-details">
         <div class="container-details">
             <div class="left_container_details">
-                <img id="product_thumbB" src="../assets/cover1.jpeg" alt="Book cover">
+                <img id="product_thumbB"  alt="Book cover">
             </div>
             <div class="right_container_details">
                 <div class="title-book-details">
